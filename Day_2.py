@@ -15,4 +15,3 @@ if count==4:
     print("APPROVED")
 else:
     print("REJECTED")
-print(count)
