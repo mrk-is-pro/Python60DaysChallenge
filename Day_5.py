@@ -1,10 +1,12 @@
 Name="Makineni Ruthvik Krishna"
+L=len(Name)-Name.count(" ")
+PLI=L%3
 
 N=int(input("Enter No. of Elements in the List: "))
 Given=[0]*N
-
 for i in range(N):
     Given[i]=int(input(f"Enter Element-{i+1}: "))
+
 very_light=[]
 normal_load=[]
 heavy_load=[]
@@ -23,9 +25,17 @@ for i in range(N):
     else:
         overload+=[Given[i]]
 
-print("\n\n---Base Classification---\n ")
-print(f"Very Light: {very_light}")
+affected_items=len(very_light)
+very_light=[]
+
+count=len(normal_load)+len(heavy_load)+len(overload)
+
+print("\n\nNo. of Valid Weights:",count)
+print("No. of Affected Items:",affected_items)
+print("L=",L," and PLI=",PLI)
+print("\n---Final Lists---\n ")
 print(f"Normal Load: {normal_load}")
 print(f"Heavy Load: {heavy_load}")
 print(f"Overload: {overload}")
-print(f"Invalid Entries: {invalid_entries}")
+print(f"Invalid Entries: {invalid_entries} ")
+
