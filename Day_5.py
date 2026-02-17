@@ -25,6 +25,7 @@ for i in range(N):
     else:
         overload+=[Given[i]]
 
+removed_very_light=very_light
 affected_items=len(very_light)
 very_light=[]
 
@@ -38,4 +39,5 @@ print(f"Normal Load: {normal_load}")
 print(f"Heavy Load: {heavy_load}")
 print(f"Overload: {overload}")
 print(f"Invalid Entries: {invalid_entries} ")
-
+print("\n---Removed From the Final Lists---\n ")
+print(f"Very Light: {removed_very_light}")
